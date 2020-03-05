@@ -33,19 +33,31 @@ Grâce à ```which ls``` on trouve où est stocké la commande ls et ensuite on 
 
 La commande ```dpkg -S $(wich -a nom_de_la_commande | tail -i) ``` permet en une seule ligne d'afficher dans quel paquet est installée la commande.
 
+On crée le script via la commande ```nano origine_commande ```. Puis on fait ```chmod u+x origine_commande``` pour que le changement se fasse sur le propriétaire (nous) et qu'il puisse s'éxécuter. 
+
+Le script : 
 ![origine_commande](https://user-images.githubusercontent.com/60732798/76021867-53f23680-5f26-11ea-9f46-00955dec5f5c.png)
 
-## Exercice 3.
+Le résultat : 
+![result](https://user-images.githubusercontent.com/60732798/76022548-ab44d680-5f27-11ea-8671-62c3809c81b9.png)
 
+## Exercice 3.
+On utilise les mêmes commandes pour créer le script et pour changer les permissions.
+
+Le script : 
+![install](https://user-images.githubusercontent.com/60732798/76022444-75075700-5f27-11ea-9812-f35693394112.png)
+
+Le résultat : 
+![test_install](https://user-images.githubusercontent.com/60732798/76022510-9405e900-5f27-11ea-87ff-c7c58314692d.png)
 
 ## Exercice 4.
 
 On utilise la commande ```dpkg -L coreutils``` qui nous affiche tous les programmes livrés avec coreutils.
 La commande **[** permet de réaliser des tests, par exemple ```[ "a" = "a" ]``` teste si la chaine de caractère "a" es la même que "a". Pour afficher ce qu'elle retourne il faut utiliser la commande ```echo $?```.
 
-
 ## Exercice 5.
 
+Pour installer le paquet ``emacs`` via l'interface graphique aptitude on saisi la commande ``` sudo aptitude ```. Ensuite on cherche le paquets ``emacs`` puis on l'installe avec la touche ``g``.
 
 ## Exercice 6.
 
@@ -54,5 +66,8 @@ Pour installer Oracle on fait :
 ```sudo apt update ``` 
 ```sudo apt install oracle-java11-installer```
 
-Un nouveau fichier a bien été créé dans/etc/apt/sources.list.d et il contient : **photo**
+Un nouveau fichier a bien été créé dans/etc/apt/sources.list.d Il contient l'adresse de dépot du répertoire virtuel permettant d'acceder aux différents éléments du répertoire.
+
+## Exercice 7.
+
 
