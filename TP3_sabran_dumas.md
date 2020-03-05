@@ -5,11 +5,13 @@
 ### Question 1
 
 On utilise la commande ```dpkg -l``` et on trouve que les 5 derniers paquets installés sont :  
+```
 xkb-data  
 xxd  
 xz-utils  
 zerofree  
 zlib1g:amd64.  
+```
 
 ### Question 2
 On utilise les commandes ```dpkg -l``` et ```apt list --installed | wc --lines``` pour compter le nombre de paquets installés. **dpkg** affiche tout seul le nombre de paquets (553) alors que **apt**  ne le fait pas, c'est donc pour cela que l'on passe par un pipe (qui nous affiche 549).
