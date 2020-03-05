@@ -5,7 +5,11 @@
 ### Question 1
 
 On utilise la commande ```dpkg -l``` et on trouve que les 5 derniers paquets installés sont : 
-xkb-data /  xxd / xz-utils / zerofree / zlib1g:amd64.
+xkb-data  
+xxd  
+xz-utils  
+zerofree  
+zlib1g:amd64.  
 
 ### Question 2
 On utilise les commandes ```dpkg -l``` et ```apt list --installed | wc --lines``` pour compter le nombre de paquets installés. **dpkg** affiche tout seul le nombre de paquets (553) alors que **apt**  ne le fait pas, c'est donc pour cela que l'on passe par un pipe (qui nous affiche 549).
@@ -62,9 +66,9 @@ Pour installer le paquet ``emacs`` via l'interface graphique aptitude on saisi l
 ## Exercice 6.
 
 Pour installer Oracle on fait : 
-```sudo add-apt-repository ppa:linuxuprising/java ``` 
-```sudo apt update ``` 
-```sudo apt install oracle-java11-installer```
+```sudo add-apt-repository ppa:linuxuprising/java ```  
+```sudo apt update ```  
+```sudo apt install oracle-java11-installer```  
 
 Un nouveau fichier a bien été créé dans/etc/apt/sources.list.d Il contient l'adresse de dépot du répertoire virtuel permettant d'acceder aux différents éléments du répertoire.
 
