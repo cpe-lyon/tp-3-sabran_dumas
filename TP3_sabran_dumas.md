@@ -63,7 +63,7 @@ La commande **[** permet de réaliser des tests, par exemple ```[ "a" = "a" ]```
 
 ## Exercice 5. Aptitude
 
-Pour installer le paquet ``emacs`` via l'interface graphique aptitude on saisi la commande ``` sudo aptitude ```. Ensuite on cherche le paquets ``emacs`` puis on l'installe avec la touche ``g``.
+Pour installer le paquet **emacs** via l'interface graphique aptitude on saisi la commande ``` sudo aptitude ```. Ensuite on cherche le paquets **emacs** puis on l'installe avec la touche **g**.
 
 ## Exercice 6. Installation d’un paquet par PPA
 
@@ -72,7 +72,7 @@ Pour installer Oracle on fait :
 ```sudo apt update ```  
 ```sudo apt install oracle-java11-installer```  
 
-Un nouveau fichier a bien été créé dans/etc/apt/sources.list.d Il contient l'adresse de dépot du répertoire virtuel permettant d'acceder aux différents éléments du répertoire.
+Un nouveau fichier a bien été créé dans **/etc/apt/sources.list.d** Il contient l'adresse de dépot du répertoire virtuel permettant d'acceder aux différents éléments du répertoire.
 
 ## Exercice 7. Création de dépôt personnalisé
 
@@ -83,18 +83,18 @@ Un nouveau fichier a bien été créé dans/etc/apt/sources.list.d Il contient l
 On se place déjà dans le dossier script :  
 ```cd ~/script```  
 
-On crée le sous-dossier ``origine-commande`` suivi d'un autre sous-dossier ``DEBIAN`` et on place l'arborescence ``usr/local/bin`` :  
+On crée le sous-dossier **origine-commande** suivi d'un autre sous-dossier **DEBIAN** et on place l'arborescence **usr/local/bin** :  
 ```mkdir -p origine-commande/DEBIAN```  
 ```mkdir -p usr/local/bin```  
 
-On copie notre script ``origine_commande`` que l'on place dans le dossier ``origine-commande`` :  
+On copie notre script **origine_commande** que l'on place dans le dossier **origine-commande** :  
 ```cp ~/origine_commande.sh ./origine-commande```  
 
 ### Question 2 
 
 On se place dans le bon dossier :  
 ```cd origine-commande/DEBIAN```
-On crée le fichier ``control`` suivant :  
+On crée le fichier **control** suivant :  
 ```
 vim control 
 
@@ -117,7 +117,7 @@ dpkg-deb --build origine-commande
 ### Création du dépôt personnel avec reprepro
 
 ### Question 1 
-On crée un dossier ``repo-cpe`` qui sera la racine de notre dépôt puis on se place dedans :  
+On crée un dossier **repo-cpe** qui sera la racine de notre dépôt puis on se place dedans :  
 ```
 mkdir repo-cpe
 cd repo-cpe 
@@ -125,14 +125,14 @@ cd repo-cpe
 
 ### Question 2
 
-On crée 2 sous dossiers ``conf `` et ``packages `` :  
+On crée 2 sous dossiers **conf ** et **packages ** :  
 ```
 mkdir conf
 mkdir packages
 ```
 ### Question 3
 
-On crée un fichier ``distributions`` dans ``conf`` avec comme paramètres :  
+On crée un fichier **distributions** dans **conf** avec comme paramètres :  
 ```
 cd conf 
 vim distributions 
@@ -148,11 +148,11 @@ Description: Une description du dépôt
 
 ### Question 4 
 
-On installe la commande ``reprepro`` puis on génère l'arborescence du dépôt avec la commande ```reprepro -b . export ```
+On installe la commande **reprepro** puis on génère l'arborescence du dépôt avec la commande ```reprepro -b . export ```
 
 ### Question 5
 
-On copie le paquet ``origine-commande.deb`` et on le met dans la racine et le dossier ``packages`` avec la commande :  
+On copie le paquet **origine-commande.deb** et on le met dans la racine et le dossier **packages** avec la commande :  
 ```
 cp ~/script/origine-commande.deb ./packages
 cp ~/script/origine-commande.deb 
@@ -164,7 +164,7 @@ reprepro -b . includedeb cosmic origine-commande.deb
 
 ### Question 6 
 
-On crée un nouveau fichier  ``repo-cpe.list`` dans le fichier `` r /etc/apt/sources.list.d`` :   
+On crée un nouveau fichier **repo-cpe.list** dans le fichier **/etc/apt/sources.list.d** :   
 ``` sudo vim /etc/apt/sources.list.d/repo-cpe.list``` et on ajoute la configuration du dépôt 
 
 ### Question 7 
@@ -186,7 +186,7 @@ passphrase : ckali
 
 ### Question 2 
 
-On ajoute ``SignWith: yes`` au fichier ``distributions`` 
+On ajoute **SignWith: yes** au fichier **distributions** 
 
 ### Question 3 
 
@@ -213,5 +213,5 @@ On récupère donc le code source de nudoku en local.
 
 ### Question 2 
 
-On éxécute la commande ```autoreconf -i``` dans le dossier ``nudoku`` autant de fois qu'il y a de paquets manquants (on peut aussi utiliser sudo apt install nudoku).
+On éxécute la commande ```autoreconf -i``` dans le dossier **nudoku** autant de fois qu'il y a de paquets manquants (on peut aussi utiliser sudo apt install nudoku).
 
