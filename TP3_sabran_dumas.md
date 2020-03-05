@@ -87,14 +87,14 @@ On crée le sous-dossier ``origine-commande`` suivi d'un autre sous-dossier ``DE
 ```mkdir -p origine-commande/DEBIAN```  
 ```mkdir -p usr/local/bin```  
 
-On copie notre script origine_commande que l'on place dans le dossier origine-commande :  
+On copie notre script ``origine_commande`` que l'on place dans le dossier ``origine-commande`` :  
 ```cp ~/origine_commande.sh ./origine-commande```  
 
 ### Question 2 
 
 On se place dans le bon dossier :  
 ```cd origine-commande/DEBIAN```
-On crée le fichier control suivant :  
+On crée le fichier ``control`` suivant :  
 ```
 vim control 
 
@@ -117,7 +117,7 @@ dpkg-deb --build origine-commande
 ### Création du dépôt personnel avec reprepro
 
 ### Question 1 
-On crée un dossier repo-cpe qui sera la racine de notre dépôt puis on se placde dedans :  
+On crée un dossier ``repo-cpe`` qui sera la racine de notre dépôt puis on se place dedans :  
 ```
 mkdir repo-cpe
 cd repo-cpe 
@@ -152,7 +152,7 @@ On installe la commande ``reprepro`` puis on génère l'arborescence du dépôt 
 
 ### Question 5
 
-On copie le paquet ``origine-commande.deb`` et on le met dans la racine et le dossier packages avec la commande :  
+On copie le paquet ``origine-commande.deb`` et on le met dans la racine et le dossier ``packages`` avec la commande :  
 ```
 cp ~/script/origine-commande.deb ./packages
 cp ~/script/origine-commande.deb 
@@ -172,7 +172,9 @@ On crée un nouveau fichier  ``repo-cpe.list`` dans le fichier `` r /etc/apt/sou
 On lance la commande ``` sudo apt update```. Il faut maintenant signer notre dépôt. 
 
 ### Signature du dépôt avec GPG
+
 ### Question 1 
+
 On génère une nouvelle paire de clé avec les commandes suivantes : 
 ``` 
 gpg --gen-key
@@ -183,6 +185,7 @@ passphrase : ckali
 ```
 
 ### Question 2 
+
 On ajoute ``SignWith: yes`` au fichier ``distributions`` 
 
 ### Question 3 
