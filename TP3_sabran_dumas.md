@@ -306,15 +306,18 @@ comprendre le bénéfice de tels outils).
 On éxécute la commande ```autoreconf -i``` dans le dossier **nudoku** autant de fois qu'il y a de paquets manquants (on peut aussi utiliser sudo apt install nudoku).
 
 Exécutez le script configure
+
 Cette phase a pour but de préparer la meilleure compialtion possible par rapport à la plateforme
 cible, de faire des choix sur les dossier d’installation du logiciel, et de générer automatiquement les
 Makefiles adaptés à votre machine. Un Makefile est un fichier utilisé par l’outil make contenant toutes
 les directives de compilation d’un logiciel. Un Makefile définit un certain nombre de règles permettant de
 construire des cibles. Les cibles les plus communes étant install (pour la compilation et l’installation
 du logiciel) et clean (pour sa suppression).
+
 Normalement, à cette étape on exécute la commande make install, qui procède à la compilation
 proprement dite et à l’installation (copie des fichiers compilés dans leur dossier de destination). Mais
 dans notre cas, on va demander à checkinstall de s’en charger et de créer un paquet au format .deb :
 sudo checkinstall
+
 Le logiciel est à présent installé (exécutez nudoku pour vous en assurer) ; on peut vérifier par exemple
 avec aptitude qu’il provient bien du paquet qu’on a créé avec checkinstall.
